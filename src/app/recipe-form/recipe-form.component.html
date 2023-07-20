@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <h1 class="text-center">Ajouter une recettes</h1>
+        <div class="col-12 col-lg-6 my-5">
+            <form #form="ngForm" (ngSubmit)="formulaire(form)">
+                <div class="mb-3">
+                    <label for="titre" class="form-label">Titre</label>
+                    <input ngModel type="text" class="form-control" id="titre" name="titre">
+                </div>
+                <div class="mb-3">
+                    <select ngModel class="form-select" aria-label="Default select example" id="difficulte" name="difficulte">
+                        <option selected>Difficulté</option>
+                        <option value="facile">Facile</option>
+                        <option value="moyen">Moyen</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="tempsPrep" class="form-label">tempsPrep</label>
+                    <textarea ngModel class="form-control" id="tempsPrep" rows="3" name="tempsPrep"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="tempsCuisson" class="form-label">Temps de cuisson</label>
+                    <input ngModel type="text" class="form-control" id="tempsCuisson" name="tempsCuisson">
+                </div>
+                <div class="mb-3">
+                    <label for="ingredients" class="form-label">Ingredients</label>
+                    <textarea ngModel class="form-control" id="ingredients" rows="3" name="ingredients"></textarea>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="cout" class="form-label">Cout</label>
+                    <input ngModel type="text" class="form-control" id="cout" name="cout">
+                </div>
+                <div class="mb-3">
+                    <label for="photo" class="form-label">Photo</label>
+                    <input ngModel type="text" class="form-control" id="photo" name="photo">
+                </div>
+                <!-- <div class="mb-3">
+                    <label for="etapes" class="form-label">Etapes</label>
+                    <textarea class="form-control" id="etapes" rows="3" name="etapes"></textarea>
+                </div> -->
+                <!-- image -->
+                <!-- <div class="mb-3">
+                    <label for="formFile" class="form-label">Default file input example</label>
+                    <input class="form-control" type="file" id="formFile" name="formFile">
+                </div> -->
+
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

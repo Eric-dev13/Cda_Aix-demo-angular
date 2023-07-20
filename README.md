@@ -1,5 +1,21 @@
 # Marmiton
 
+  Générer une nouvelle app: ng new marmiton --skip-tests
+  
+  créer un composant nav
+  créer un composant home 
+  
+  installation bootstrap:
+  npm install bootstrap --save
+  
+  ensuite de le style.css global
+  ajouter
+  @import 'bootstrap/dist/css/bootstrap.min.css'
+
+  avec le composant boutton générer 2 boutton qui vont permettre au survol de déclencher un évènement qui face apparaitre sur l'un le cout et la difficulté et sur l'autre les temps préparation et cuisson
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
 ## Development server
