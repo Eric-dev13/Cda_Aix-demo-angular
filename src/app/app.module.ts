@@ -7,7 +7,10 @@ import { NavComponent } from './nav/nav.component';
 import { BoutonDetailComponent } from './bouton-detail/bouton-detail.component';
 import { AppRoutingModule } from './app-routing.module';                            // Gestion du routage 
 import { RecipeFormComponent } from './recipe-form/recipe-form.component';
-import { FormsModule } from '@angular/forms';                                       // Gestion de formulaire lié a ngModel
+import { FormsModule } from '@angular/forms';
+import { ListRecipeComponent } from './list-recipe/list-recipe.component';
+import { CategorieComponent } from './categorie/categorie.component';
+import { CategoryFormComponent } from './category-form/category-form.component';                                       // Gestion de formulaire lié a ngModel
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { FormsModule } from '@angular/forms';                                   
     HomeComponent,
     NavComponent,
     BoutonDetailComponent,
-    RecipeFormComponent
+    RecipeFormComponent,
+    ListRecipeComponent,
+    CategorieComponent,
+    CategoryFormComponent
   ],
   imports: [
     BrowserModule,

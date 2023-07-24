@@ -2,13 +2,28 @@
     <div class="row justify-content-center">
         <h1 class="text-center">Ajouter une recettes</h1>
         <div class="col-12 col-lg-6 my-5">
-            <form #form="ngForm" (ngSubmit)="formulaire(form)">
+            <!-- #form: objet pour encapsuler les valeurs des champs avec attribut name ($_POST) -->
+            <form #form="ngForm" (submit)="formulaire(form,id)">
                 <div class="mb-3">
                     <label for="titre" class="form-label">Titre</label>
-                    <input ngModel type="text" class="form-control" id="titre" name="titre">
+                    <!-- 
+                    [(ngModel)]="recette.value":  Cette directive est utilisée pour établir une liaison bidirectionnelle de données entre le modèle de données (dans le composant) et la vue (template HTML). 
+                    La liaison bidirectionnelle de données signifie que les changements dans le modèle de données mettront automatiquement à jour la vue,
+                     et les changements dans la vue mettront également à jour le modèle de données. 
+                    Cela permet une synchronisation fluide entre l'interface utilisateur et les données de l'application.
+                    -->
+                    <input [(ngModel)]="recette.titre" type="text" class="form-control" id="titre" name="titre">
                 </div>
                 <div class="mb-3">
-                    <select ngModel class="form-select" aria-label="Default select example" id="difficulte" name="difficulte">
+                    <label for="category" class="form-label">Catégories</label>
+                    <select [(ngModel)]="recette.category" class="form-select" aria-label="Default select example" id="category" name="category" >
+                        <option disabled>Catégorie</option>
+                        <option [value]="category.id" *ngFor="let category of categories" >{{category.name}}</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="difficulte" class="form-label">Difficulté</label>
+                    <select [(ngModel)]="recette.difficulte" class="form-select" aria-label="Default select example" id="difficulte" name="difficulte">
                         <option selected>Difficulté</option>
                         <option value="facile">Facile</option>
                         <option value="moyen">Moyen</option>
@@ -17,24 +32,24 @@
                 </div>
                 <div class="mb-3">
                     <label for="tempsPrep" class="form-label">tempsPrep</label>
-                    <textarea ngModel class="form-control" id="tempsPrep" rows="3" name="tempsPrep"></textarea>
+                    <textarea [(ngModel)]="recette.tempsPrep" class="form-control" id="tempsPrep" rows="3" name="tempsPrep"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="tempsCuisson" class="form-label">Temps de cuisson</label>
-                    <input ngModel type="text" class="form-control" id="tempsCuisson" name="tempsCuisson">
+                    <input [(ngModel)]="recette.tempsCuisson" type="text" class="form-control" id="tempsCuisson" name="tempsCuisson">
                 </div>
                 <div class="mb-3">
                     <label for="ingredients" class="form-label">Ingredients</label>
-                    <textarea ngModel class="form-control" id="ingredients" rows="3" name="ingredients"></textarea>
+                    <textarea [(ngModel)]="recette.ingredients" class="form-control" id="ingredients" rows="3" name="ingredients"></textarea>
                 </div>
                 
                 <div class="mb-3">
                     <label for="cout" class="form-label">Cout</label>
-                    <input ngModel type="text" class="form-control" id="cout" name="cout">
+                    <input [(ngModel)]="recette.cout" type="text" class="form-control" id="cout" name="cout">
                 </div>
                 <div class="mb-3">
                     <label for="photo" class="form-label">Photo</label>
-                    <input ngModel type="text" class="form-control" id="photo" name="photo">
+                    <input [(ngModel)]="recette.photo" type="text" class="form-control" id="photo" name="photo">
                 </div>
                 <!-- <div class="mb-3">
                     <label for="etapes" class="form-label">Etapes</label>

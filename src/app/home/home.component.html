@@ -7,14 +7,12 @@
             <img src="{{ recette.photo }}" class="card-img-top" alt="...">
 
             <div class="card-body">
-                <!-- <div class="d-flex justify-content-around align-items-center"> -->
-                    <h5 class="card-title fw-bold">{{ recette.titre }}</h5>
+                <h5 class="card-title fw-bold">{{ recette.titre }}</h5>
 
-                    <app-bouton-detail [recette]="recette" [description]="recette.description"
-                        [ingredients]="recette.ingredients" [difficulte]="recette.difficulte"
-                        [tempsPrep]="recette.tempsPrep" [tempsCuisson]="recette.tempsCuisson" [cout]="recette.cout"
-                        [etapes]="recette.etapes"></app-bouton-detail>
-                <!-- </div> -->
+                <app-bouton-detail [recette]="recette" [description]="recette.description"
+                    [ingredients]="recette.ingredients" [difficulte]="recette.difficulte"
+                    [tempsPrep]="recette.tempsPrep" [tempsCuisson]="recette.tempsCuisson" [cout]="recette.cout"
+                    [etapes]="recette.etapes"></app-bouton-detail>
             </div>
         </div>
     </div>

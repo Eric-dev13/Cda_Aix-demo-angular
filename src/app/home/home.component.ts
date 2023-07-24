@@ -27,7 +27,7 @@ export class HomeComponent {
       tempsPrep: '30',
       tempsCuisson: '30',
       cout: 2,
-      photo: "https://img.cuisineaz.com/960x504/2015/09/22/i50088-recettes-tartiflettes.webp",
+      photo: "https://assets.afcdn.com/recipe/20220128/128250_w2000h1445c1cx1294cy688cxb2037cyb1472.webp",
       etapes: ['faire revenir les oignons et les lardons', 'ajouter les pomme de terre et le vin blanc', '']
     },
     {
